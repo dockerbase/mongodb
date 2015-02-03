@@ -18,7 +18,11 @@ This repository contains **Dockerbase** of [MongoDB](http://www.mongodb.org/) fo
 
 ### Usage
 
-    docker run -it --rm -p 27017:27017 -v /data/db:/data/db dockerbase/mongodb -name dockerbase-mongodb
+    $ sudo docker run -it -p 27017:27017 -v /data/db:/data/db --name dockerbase-mongodb -d dockerbase/mongodb /sbin/runit
+    $ sudo docker stop dockerbase-mongodb
+    $ sudo docker start dockerbase-mongodb
+    ...
+    $ sudo docker rm dockerbase-mongodb
 
 ### Components & Versions
 
